@@ -1078,3 +1078,30 @@ html {
 .right-sidebar .text-horizontal {
     width: 95px;
 }
+
+.snake-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.single-segno-img {
+    width: 100%;
+    height: 400px;
+}
+
+.single-segno-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slick-slide {
+    margin: 10px; /* Adjust spacing as needed */
+}
