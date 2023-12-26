@@ -2,13 +2,12 @@ $(document).ready(function () {
 // Home and profile page image change
 $('.explore-btn').click(function () {
     $('#explore-img').attr('src', 'assets/images/home-2.gif');
-
     $('#toggle-profile').fadeIn(1000);
     $('.explore-btn').fadeOut(1000);
     $('.text-btn').fadeIn(1000);
     setTimeout(function () {
         $('#explore-img').attr('src', 'assets/images/home-3.gif');
-    },1000);
+    },730); //here
 });
 
 $('#toggle-profile').click(function () {
@@ -17,31 +16,31 @@ $('#toggle-profile').click(function () {
     $('#explore-img').attr('src', 'assets/images/home-4.gif');
     setTimeout(function () {
         $('#explore-img').attr('src', 'assets/images/home-1.jpg');
-    },1000);
+    },730); //here
 
     $('#toggle-profile').fadeOut(1000);
     $('.explore-btn').fadeIn(1000);
     $('.text-btn').fadeOut(1000);
 });
 
-
+//  home-hero-img
+//  about-hero-img
 $('#about-btn').click(function () {
     $('.about-content-wrapper').css('left', '20px');
     $('#toggle-profile').css('display', 'none');
-    $('#toggle-about').css('display', 'block');
     $('#toggle-about').fadeIn(1000);
-    $('.about-hero-img').fadeIn(1000);
-    $('.home-hero-img').fadeOut(1000);
+    $('.about-hero-img').show();
+    $('.home-hero-img').hide();
 });
 
 $('#toggle-about').click(function () {
     $('.about-content-wrapper').css('left', '-100%');
     $('.profile-hero-img').fadeIn(1000);
-    $('.about-hero-img').fadeOut(1000);
+
     $('#toggle-profile').css('display', 'block');
-    // $('#toggle-profile').fadeIn(1000);
     $(this).css('display', 'none');
-    // $(this).fadeOut(1000);
+    $('.about-hero-img').hide();
+    $('.home-hero-img').show();
 });
 
 
