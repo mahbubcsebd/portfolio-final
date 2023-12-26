@@ -1056,3 +1056,16 @@ html {
     width: 100%;
     -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
   } */
+
+.monaco-hero-content {
+    justify-content: start !important;
+}
+
+.monaco-hero-content .hero-text-content {
+    margin-top: 400px !important;
+}
+
+.sidebar-bullet .sidebar-menu-list {
+    position: sticky;
+    top: 20px;
+}
