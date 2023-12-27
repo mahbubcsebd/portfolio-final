@@ -191,7 +191,6 @@ $('.back-to-hero').click(function () {
     });
 
     // Audio Play
-    $(document).ready(function () {
         $('.playPauseButton').on('click', function () {
             const audio = $('.myAudio')[0];
 
@@ -203,5 +202,71 @@ $('.back-to-hero').click(function () {
                 $('.playPauseButton').html('<i class="fa-solid fa-play"></i>');
             }
         });
-    });
+
+        // Slick sidebar Slider
+            $('.menu-dot-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: true,
+                verticalSwiping: true,
+                arrows: false,
+                loop: false,
+                draggable: false,
+                // fade: true,
+                // speed: 1000,
+                // cssEase: 'linear',
+            });
+
+            $('.prev-slide').click(function () {
+                $('.menu-dot-slider').slick('slickPrev');
+            });
+
+            $('.next-slide').click(function () {
+                $('.menu-dot-slider').slick('slickNext');
+            });
+
+            var $dots = $('.custom-dots li');
+            // On slide change, update the active dot
+            $('.menu-dot-slider').on(
+                'afterChange',
+                function (event, slick, currentSlide) {
+                    $dots.removeClass('active');
+                    $dots.eq(currentSlide).addClass('active');
+                }
+            );
+
+            // Handle dot click to change menu-dot-slider
+            $dots.on('click', function () {
+                var index = $(this).index();
+                $('.menu-dot-slider').slick('slickGoTo', index); // Go to the corresponding slide
+            });
+
+            $(
+                '.sidebar-bullet .custom-dots li,.sidebar-bullet .prev-slide,.sidebar-bullet .next-slide'
+            ).click(function () {
+                $(
+                    '#section-pensiero-details, #section-penso-details, #section-volto-details, #section-monaco-details, #section-nova-details, #section-bello-details'
+                ).fadeOut(1000);
+            });
+
+
+            // Swiper Slider
+            var swiper = new Swiper('.mySwiper', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                coverflowEffect: {
+                    rotate: 15,
+                    stretch: 0,
+                    depth: 300,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                loop: true,
+            });
 });
