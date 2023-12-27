@@ -3,6 +3,12 @@
         width: 53% !important;
     }
 
+    .swiper {
+        width: 560px;
+        height: 350px;
+        top: 205px;
+    }
+
     .hero-container-img.about-hero-img {
         width: 30% !important;
     }
@@ -13,6 +19,10 @@
 
     .section-lg-img-box {
         width: 290px !important;
+    }
+
+    .mouve-img-box {
+        width: 390px !important;
     }
 
     .nova-sm-img-box {

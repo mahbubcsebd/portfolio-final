@@ -698,7 +698,7 @@ label {
 }
 
 .bello-sm-img-box {
-    top: 407px;
+    top: 397px;
     width: 120px;
 }
 
@@ -1039,9 +1039,9 @@ html {
 
 /* Swipper */
 .swiper {
-    width: 600px;
+    width: 560px;
     height: 400px;
-    top: 220px;
+    top: 268px;
 }
 
 .swiper-slide {
@@ -1104,4 +1104,8 @@ html {
 
 .slick-slide {
     margin: 10px; /* Adjust spacing as needed */
+}
+
+.mouve-img-box {
+    width: 40% !important;
 }
